@@ -9,10 +9,10 @@ script:
   - docker run vivekdocker/react-test npm test -- --coverage
 
 after_success:
-  - docker build -t vivekshankar/multi-client ./client
-  - docker build -t vivekshankar/multi-nginx ./nginx
-  - docker build -t vivekshankar/multi-server ./server
-  - docker build -t vivekshankar/multi-worker ./worker
+  - docker build -t viveksome/multi-client ./client
+  - docker build -t viveksome/multi-nginx ./nginx
+  - docker build -t viveksome/multi-server ./server
+  - docker build -t viveksome/multi-worker ./worker
   # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take these images and push them to docker hub
